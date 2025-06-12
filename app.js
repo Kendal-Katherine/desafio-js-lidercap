@@ -1,12 +1,10 @@
 const express = require('express');
-const controller = require('./controller');
+const routes = require('./src/routes');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-
-app.use('/api', controller);
+app.use('/api', routes);
 
 app.get('/', (req, res) => {
   res.send('Bem-vindo à API do desafio Lidercap! Use /api/users/[id] para acessar os dados.');
@@ -16,7 +14,9 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Rota não encontrada' });
 });
 
-
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Erro interno do servidor' });
 });
+
+module.exports = app;
