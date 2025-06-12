@@ -1,123 +1,44 @@
+# Desafio de Arquitetura de Código
 
-# API - Desafio Lidercap 🚀
+Este repositório contém um desafio prático focado em arquitetura de código para aplicações. O objetivo é propor, implementar e documentar uma solução para um problema de organização e estruturação de projetos de software.
 
-Esta é uma API simulada construída com **Node.js** e **Express**, que fornece dados fictícios de usuários, seus posts e comentários. O projeto segue boas práticas de estruturação de pastas, organização de responsabilidades e uso de Promises com `util.promisify()` para facilitar testes e legibilidade.
+## Objetivo
 
----
+Desenvolver uma aplicação que demonstre boas práticas de arquitetura de código, separação de responsabilidades, modularização e escalabilidade. O desafio pode envolver a criação de APIs, microsserviços, monólitos bem estruturados ou qualquer abordagem arquitetural relevante.
 
-## 📁 Estrutura de Pastas
+## Requisitos
 
-```
-desafio-js-lidercap/
-├── src/
-│   ├── controllers/         # Funções que tratam as requisições
-│   │   └── userController.js
-│   ├── routes/              # Definição das rotas
-│   │   └── index.js
-│   └── services/            # Funções simuladas com dados mockados
-│       └── service.js
-├── src/__tests__/           # Testes automatizados com Jest e Supertest
-│   └── userController.test.js
-├── insomnia/                # Pasta com arquivos de testes no Insomnia
-│   └── Insomnia_2025-06-12.yaml
-├── app.js                   # Configuração da aplicação Express
-├── index.js                 # Inicialização do servidor
-├── package.json
-├── package-lock.json
-└── README.md
+- Estruturar o projeto de forma clara e organizada.
+- Utilizar princípios SOLID e boas práticas de desenvolvimento.
+- Documentar as decisões arquiteturais tomadas.
+- Implementar testes automatizados (quando aplicável).
+- Fornecer instruções para execução e testes do projeto.
 
-```
+## Como começar
 
----
+1. Faça um fork deste repositório.
+2. Implemente sua solução na pasta apropriada.
+3. Documente suas decisões no arquivo `ARQUITETURA.md` (opcional).
+4. Envie um pull request com sua solução.
 
-## 🧪 Testes com Insomnia
+## Sugestões
 
-Os endpoints foram testados utilizando o **Insomnia**. A collection utilizada está neste repositório:
+- Utilize frameworks e bibliotecas de sua preferência.
+- Foque na clareza e manutenibilidade do código.
+- Explique as escolhas feitas na documentação.
 
-📎 [Insomnia_2025-06-12.yaml](./insomnia/Insomnia_2025-06-12.yaml)
-
-💡 Para usar, abra o Insomnia e selecione `Import Data → From File`.
-
----
-
-## 🧪 Testes automatizados com Jest e Supertest
-
-Para garantir o funcionamento correto das rotas, adicionamos testes automatizados usando **Jest** e **Supertest**.
-
-### Como rodar os testes
-
-1. Instale as dependências de teste (se ainda não tiver):
+## Como rodar
 
 ```bash
-npm install --save-dev jest supertest
-```
-
-2. Execute os testes com o comando:
-
-```bash
-npm test
-```
-
-Os testes verificam os endpoints principais simulando o serviço com dados mockados, testando respostas de sucesso e tratamento de erros.
-
----
-
-## ▶️ Como executar o projeto
-
-### 1. Clone o repositório
-
-```bash
-git clone <url-do-seu-repo>
-cd sua-api
-```
-
-### 2. Instale as dependências
-
-```bash
+# Instale as dependências
 npm install
+
+# Execute a aplicação
+npm start
 ```
 
-### 3. Execute o servidor
-
-```bash
-node index.js
-```
-
-O servidor ficará disponível em:
-
-```
-http://localhost:3000
-```
+Adapte os comandos conforme a stack utilizada.
 
 ---
 
-## 📌 Endpoints disponíveis
-
-| Método | Rota                            | Descrição                                         |
-|--------|--------------------------------|--------------------------------------------------|
-| GET    | `/api/users/:userId`            | Retorna os dados de um usuário específico        |
-| GET    | `/api/users/:userId/posts`      | Retorna os posts de um usuário                    |
-| GET    | `/api/posts/:postId/comments`   | Retorna os comentários de um post                 |
-| GET    | `/api/users/:userId/full`       | Retorna os dados completos de um usuário, seus posts e comentários do primeiro post |
-
----
-
-## 👩‍💻 Tecnologias utilizadas
-
-- Node.js  
-- Express  
-- Insomnia (para testes manuais)  
-- Jest e Supertest (para testes automatizados)  
-- `util.promisify` (para converter funções de callback em Promises)  
-
----
-
-## ✅ Próximos passos sugeridos
-
-- Substituir dados mock por banco de dados real (ex: MongoDB com Mongoose)  
-- Implementar autenticação com JWT  
-- Criar rotas de login e registro com proteção por token  
-
----
-
-Feito com 💻 por [Kendal Katherine Correia](#)
+Qualquer dúvida, abra uma issue!
