@@ -67,8 +67,8 @@ Os testes verificam os endpoints principais simulando o serviço com dados mocka
 ### 1. Clone o repositório
 
 ```bash
-git clone <url-do-seu-repo>
-cd sua-api
+git clone https://github.com/Kendal-Katherine/desafio-js-lidercap
+cd desafio-js-lidercap
 ```
 
 ### 2. Instale as dependências
@@ -80,7 +80,7 @@ npm install
 ### 3. Execute o servidor
 
 ```bash
-node index.js
+npm start
 ```
 
 O servidor ficará disponível em:
@@ -119,5 +119,20 @@ http://localhost:3000
 - Criar rotas de login e registro com proteção por token  
 
 ---
+
+## 🧠 Uso de Inteligência Artificial na Organização do Projeto
+
+Durante o desenvolvimento deste projeto, foi utilizado apoio de Inteligência Artificial (IA), especificamente o ChatGPT da OpenAI, para:
+
+- **Estruturar pastas e arquivos** conforme boas práticas de arquitetura em projetos Node.js com Express.
+- **Documentar** o projeto de forma clara e acessível.
+- **Acelerar decisões técnicas**, como a escolha entre ferramentas de teste automatizado (Jest e Supertest) e sugestões de melhorias futuras (como uso de banco de dados e autenticação JWT).
+- **Escrever testes automatizados** e simular chamadas a serviços com dados mockados.
+- **Revisar e gerar código boilerplate** com foco em organização, padronização e clareza.
+
+### 💡 Justificativa
+
+O uso da IA teve como objetivo **aumentar a produtividade**, garantir **coerência técnica** com padrões modernos e apoiar uma desenvolvedora em início de carreira a tomar decisões mais fundamentadas, com menor curva de pesquisa.
+
 
 Feito com 💻 por [Kendal Katherine Correia](#)
